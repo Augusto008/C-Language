@@ -4,6 +4,127 @@
 #include<string.h>
 #include<stdbool.h>
 
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------     Procedures     --------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------
+
+void op1(){		//--------------------------------------------------------     Z Value
+	
+	bool	cycle = 1;
+	int		selection = 0;
+
+	do{
+		printf("|-----------------------------------  The Operators  -----------------------------------|");
+		printf("\n\nHere, you'll will see the types of variables and the operators working.");
+		printf("\nTo initiate, please, chose one of the options below:");
+		
+		printf("\n\n1 _________________ =");
+		
+		printf("\n\nAritmetical Operators:");
+		printf("\n2 _________________ +");
+		printf("\n3 _________________ -");
+		printf("\n4 _________________ *");
+		printf("\n5 _________________ /");
+		printf("\n6 _________________ %%");
+		
+		printf("\n\nRelational Operators:");
+		printf("\n7 _________________ ==");
+		printf("\n8 _________________ >");
+		printf("\n9 _________________ >=");
+		printf("\n10 ________________ <");
+		printf("\n11 ________________ <=");
+		printf("\n12 ________________ !=");
+		
+		printf("\n\nLogic Operators:");
+		printf("\n13 ________________ &&");
+		printf("\n14 ________________ ||");
+		printf("\n15 ________________ !");
+		
+		printf("\n\n16 ________________ Rules between the operators and precedence order:");
+		
+		printf("\n\n17 ________________ Pre Increments and Post Increments:");
+		
+		printf("\n\n0 ________________ Return to main menu");
+		
+		printf("\n\n=> ");
+		scanf("%d", &selection);
+		
+		system("cls");
+		
+		switch (selection) {
+			case 1:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 2:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 3:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 4:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 5:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 6:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 7:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 8:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 9:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 10:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 11:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 12:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 13:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 14:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 15:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 16:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 17:
+				printf("You choose the option %d.\n\n", selection);
+				break;
+			case 0:
+				cycle = 0;
+				printf("Redirecting to the main menu");
+				printf("\n\n...");
+				break;
+			default:
+				selection = '\0';
+				cycle = 1;
+				printf("Invalid Option");
+				printf("\n\nPlease, choose some option of the menu.\n\n");
+		};
+		system("pause");
+		system("cls");
+	}while(cycle == true);
+};
+
+
+
+
 //------------------------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------    Main Menu    ---------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -26,7 +147,7 @@ int main() {
 	
 	do{
 		printf("|----------------------------  Menu  ----------------------------|\n\n");
-		printf("1 - The \"Z\" value\n");
+		printf("1 - C language attributes\n");
 		printf("2 - BMI (Body Mass Index)\n");
 		printf("3 - Read 10 random values and print the value\n");
 		printf("4 - Area of the Triangle\n");
@@ -46,79 +167,76 @@ int main() {
 		
 		switch (select){
 			case 1:
-				//op1();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
-				system("pause");
-				system("cls");
+				op1();
 				break;
 			case 2:
 				//op2();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 3:
 				//op3();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 4:
 				//op4();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 5:
 				//op5();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 6:
 				//op6();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 7:
 				//op7();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 8:
 				//op8();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 9:
 				//op9();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 10:
 				//op10();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 11:
 				//op11();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 12:
 				//op12();
-				printf("\n\nOpção %d foi elecionada.\n\n", select);
+				printf("\n\nYou chose the option %d.\n\n", select);
 				system("pause");
 				system("cls");
 				break;
 			case 0:
-				printf("\n\nYou chosed the option \"0\"!\n\n");
+				printf("\n\nYou chose the option \"0\"!\n\n");
 				printf("The program is closing!\n");
 				printf("See you!\n\n");
 				loop = false;
