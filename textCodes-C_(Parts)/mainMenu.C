@@ -8,6 +8,28 @@
 
 
 //------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------     Functions     ---------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------     BMI Calculator (parameter by value)
+double bmiCalc(double bmiResult){
+	
+	float height, weight = 0;
+	
+	printf("\n\nPlease enter your height(in meters): ");
+	scanf("%f", &height);
+	printf("Please enter your weight(in Kg): ");
+	scanf("%f", &weight);
+	
+	bmiResult = weight / (height * height);
+	
+	return(bmiResult);
+};
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
 //--------------------------------------------------------     Procedures     --------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------
 
@@ -122,6 +144,61 @@ void op1(){		//--------------------------------------------------------     C la
 	}while(cycle == true);
 };
 
+void op2(){		//--------------------------------------------------------    BMI (Body Mass Index)
+	
+	char	looping = '\0';
+	double	bmi = 0;
+	
+	do{
+		system("cls");
+		printf("|-----------------------------------  Body Mass Index  -----------------------------------|");
+		printf("\n\nThis index is acquired by dividing the weight(in Kilogram) by the height(in meter) squared.");
+		printf("\nThe levels of BMI are bellow:");
+		printf("\n\nBMI classification:");
+		printf("\nBMI <= 18.5				Under Weight");
+		printf("\n18.5 < BMI <= 24.9			Normal Weight");
+		printf("\n24.9 < BMI <= 29.9			Overweight");
+		printf("\n29.9 < BMI <= 34.9			Obseity 1");
+		printf("\n34.9 < BMI <= 39.9			Obesity 2");
+		printf("\nBMI > 39.9				Obesity 3 or Morbid");
+		printf("\n\n|-----------------------------------------------------------------------------------------|");
+		
+		bmi = bmiCalc(bmi);
+		
+		printf("\n\nYour BMI level is: %.1f", bmi);
+		
+		if (bmi <= 18.5) {
+			printf("\nYou're under Weight\n\n");
+		}else if (bmi > 18.5 && bmi <= 24.9){
+			printf("\nYou're OK. Your BMI is normal.\n\n");
+		}else if (bmi > 24.9 && bmi <= 29.9){
+			printf("\nBe Careful. You are Overweight.\n\n");
+		}else if (bmi > 29.9 && bmi <= 34.9){
+			printf("\nCaution! You are in obesity level 1.\n\n");
+		}else if (bmi > 34.9 && bmi <= 39.9){
+			printf("\nDanger!\n You are in obesity level 2.\nYou need to see a doctor.\n\n");
+		} else {
+			printf("\nDANGER!!\nYou are in obesity leve 3.\nFor the sake of your health, please go to a Doctor!\n\n");
+		};
+		
+		system("pause");
+		
+		do{
+			system("cls");
+			printf("Do you want to make another search? ");
+			printf("\nEnter \"Y\" for YES or \"N\" for NO: ");
+			scanf("%c", &looping);
+			if (looping != 'y' && looping != 'Y' && looping != 'n' && looping != 'N') {
+				looping = '\0';
+				printf("\n\nINVALID OPTION\n\n");
+				system("pause");
+			};
+		} while (looping != 'y' && looping != 'Y' && looping != 'n' && looping != 'N');
+		
+		system("cls");
+	} while (looping == 'y' || looping == 'Y');
+};
+
 
 
 
@@ -147,7 +224,7 @@ int main() {
 	
 	do{
 		printf("|----------------------------  Menu  ----------------------------|\n\n");
-		printf("1 - C language attributes\n");
+		printf("1 - C language operators\n");
 		printf("2 - BMI (Body Mass Index)\n");
 		printf("3 - Read 10 random values and print the value\n");
 		printf("4 - Area of the Triangle\n");
@@ -170,8 +247,7 @@ int main() {
 				op1();
 				break;
 			case 2:
-				//op2();
-				printf("\n\nYou chose the option %d.\n\n", select);
+				op2();
 				break;
 			case 3:
 				//op3();
