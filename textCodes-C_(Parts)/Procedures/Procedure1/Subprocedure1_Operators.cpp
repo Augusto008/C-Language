@@ -4,7 +4,7 @@
 #include<string.h>
 #include<stdbool.h>
 
-int main(){		//--------------------------------------------------------     Z Value
+int main(){		//--------------------------------------------------------     C language attributes
 	
 	setlocale(LC_ALL, "english");
 	
