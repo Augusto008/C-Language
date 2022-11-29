@@ -11,7 +11,7 @@
 //--------------------------------------------------------     Procedures     --------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------
 
-void op1(){		//--------------------------------------------------------     Z Value
+void op1(){		//--------------------------------------------------------     C language attributes
 	
 	bool	cycle = 1;
 	int		selection = 0;
@@ -114,7 +114,7 @@ void op1(){		//--------------------------------------------------------     Z Va
 			default:
 				selection = '\0';
 				cycle = 1;
-				printf("Invalid Option");
+				printf("!!!!    INVALID OPTION    !!!!");
 				printf("\n\nPlease, choose some option of the menu.\n\n");
 		};
 		system("pause");
@@ -172,76 +172,52 @@ int main() {
 			case 2:
 				//op2();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 3:
 				//op3();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 4:
 				//op4();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 5:
 				//op5();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 6:
 				//op6();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 7:
 				//op7();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 8:
 				//op8();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 9:
 				//op9();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 10:
 				//op10();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 11:
 				//op11();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 12:
 				//op12();
 				printf("\n\nYou chose the option %d.\n\n", select);
-				system("pause");
-				system("cls");
 				break;
 			case 0:
 				printf("\n\nYou chose the option \"0\"!\n\n");
 				printf("The program is closing!\n");
 				printf("See you!\n\n");
 				loop = false;
-				system("pause");
-				system("cls");
 				break;
 			default:
 				select = '\0';
