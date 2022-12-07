@@ -127,7 +127,14 @@ void op1(){		//--------------------------------------------------------     C la
 				printf("\ndiv = div / div;		//\"div\" recieves the division of \"div\" by itself\n\n");
 				break;
 			case 6:
-				printf("You choose the option %d.\n\n", selection);
+				printf("The operator \"%%\" it's responsable by the module operation.");
+				printf("\nThis operator basically return the rest of the division by the values around it.");
+				printf("\n\nFor example:");
+				printf("\nmod = 15 %% 8;			//The variable \"div\" recieves \"7\"\n");
+				printf("\nmod = num1 %% num2;		//\"mod\" recieves the rest of the division of \"num1\" by \"num2\"\n");
+				printf("\nmod = mult %% num1;		//\"mod\" recieves the rest of the division of \"mod\" by \"num1\"\n");
+				printf("\nmod %%= 2;			//\"mod\" recieves the rest of the division of \"mod\" by \"2\"\n");
+				printf("\nmod = mult %% mult;		//\"mod\" recieves the rest of the division of \"mod\" by itself\n\n");
 				break;
 			case 7:
 				printf("You choose the option %d.\n\n", selection);
