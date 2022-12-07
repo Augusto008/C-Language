@@ -78,7 +78,13 @@ void op1(){		//--------------------------------------------------------     C la
 		
 		switch (selection) {
 			case 1:
-				printf("You choose the option %d.\n\n", selection);
+				printf("The operator \"=\" makes the relation between the value and the operator or between two operators.");
+				printf("\nThis operator basically assign a value to a variable:");
+				printf("\n\nFor example:");
+				printf("\nnum = 10;			//The number \"10\" is assigned to the variable named as num");
+				printf("\nname = \'A\';			//The letter \"A\" is assigned to the variable named as name by using simple quotes.");
+				printf("\nnamed[] = \"Avalon\";		//The string \"Avalon\" is assigned to the array variable named as name by using double quotes.");
+				printf("\nvariant = name;			//The variable variant recieves the value of the variable name.\n\n");
 				break;
 			case 2:
 				printf("You choose the option %d.\n\n", selection);
