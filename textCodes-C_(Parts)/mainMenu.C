@@ -117,7 +117,14 @@ void op1(){		//--------------------------------------------------------     C la
 				printf("\nmult = mult * mult;		//\"mult\" recieves the multiplication between \"num1\" and itself\n\n");
 				break;
 			case 5:
-				printf("You choose the option %d.\n\n", selection);
+				printf("The operator \"/\" it's responsable by the division operation.");
+				printf("\nThis operator basically divides the value in it's left by the value in it's right:");
+				printf("\n\nFor example:");
+				printf("\ndiv = 9 / 3;			//The variable \"div\" recieves \"3\"\n");
+				printf("\ndiv = num1 / num2;		//\"div\" recieves the division of \"num1\" by \"num2\"\n");
+				printf("\ndiv = div / num1;		//\"div\" recieves the division of \"div\" by \"num1\"\n");
+				printf("\ndiv /= 7;			//\"div\" recieves the division of \"div\" by \"7\"\n");
+				printf("\ndiv = div / div;		//\"div\" recieves the division of \"div\" by itself\n\n");
 				break;
 			case 6:
 				printf("You choose the option %d.\n\n", selection);
