@@ -87,7 +87,14 @@ void op1(){		//--------------------------------------------------------     C la
 				printf("\nvariant = name;			//The variable variant recieves the value of the variable name.\n\n");
 				break;
 			case 2:
-				printf("You choose the option %d.\n\n", selection);
+				printf("The operator \"+\" it's responsable by the sum operation.");
+				printf("\nThis operator basically sums the values around it:");
+				printf("\n\nExamples:");
+				printf("\nsum = 2 + 8;			//The variable \"sum\" recieves \"10\"\n");
+				printf("\nsum = num1 + num2;		//\"sum\" recieves the sum between the variables \"num1\" and \"num2\"\n");
+				printf("\nsum = sum + num1;		//\"sum\" recieves the sum between the variables \"sum1\" and \"num1\"\n");
+				printf("\nsum += 8;			//\"sum\" adds \"8\" to the value of the variable \"sum\"\n");
+				printf("\nsum = sum + sum;		//\"sum\" recieves the sum between the variable \"sum\" and itself\n\n");
 				break;
 			case 3:
 				printf("You choose the option %d.\n\n", selection);
