@@ -107,7 +107,14 @@ void op1(){		//--------------------------------------------------------     C la
 				printf("\nsub = sub - sub;		//\"sub\" recieves the subtraction of \"num1\" by itself\n\n");
 				break;
 			case 4:
-				printf("You choose the option %d.\n\n", selection);
+				printf("The operator \"*\" it's responsable by the multiplication operation.");
+				printf("\nThis operator basically multiplicates the values around it:");
+				printf("\n\nFor example:");
+				printf("\nmult = 3 * 4;			//The variable \"mult\" recieves \"12\"\n");
+				printf("\nmult = num1 * num2;		//\"mult\" recieves the multiplication between \"num1\" and \"num2\"\n");
+				printf("\nmult = mult * num1;		//\"mult\" recieves the multiplication between \"mult\" and \"num1\"\n");
+				printf("\nmult *= 2;			//\"mult\" recieves the multiplication between \"mult\" and \"2\"\n");
+				printf("\nmult = mult * mult;		//\"mult\" recieves the multiplication between \"num1\" and itself\n\n");
 				break;
 			case 5:
 				printf("You choose the option %d.\n\n", selection);
