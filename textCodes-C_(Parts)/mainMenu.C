@@ -97,7 +97,14 @@ void op1(){		//--------------------------------------------------------     C la
 				printf("\nsum = sum + sum;		//\"sum\" recieves the sum between the variable \"sum\" and itself\n\n");
 				break;
 			case 3:
-				printf("You choose the option %d.\n\n", selection);
+				printf("The operator \"-\" it's responsable by the subtraction operation.");
+				printf("\nThis operator basically subtract the value in the left by the value in the right.");
+				printf("\n\nFor example:");
+				printf("\nsub = 10 - 6;			//The variable \"sub\" recieves \"4\"\n");
+				printf("\nsub = num1 - num2;		//\"sub\" recieves the subtraction of \"num1\" by \"num2\"\n");
+				printf("\nsub = sub - num1;		//\"sub\" recieves the subtraction of \"sub\" by \"num1\"\n");
+				printf("\nsub -= 2;			//\"sub\" recieves the subtraction of \"sub\" by \"num1\"\n");
+				printf("\nsub = sub - sub;		//\"sub\" recieves the subtraction of \"num1\" by itself\n\n");
 				break;
 			case 4:
 				printf("You choose the option %d.\n\n", selection);
