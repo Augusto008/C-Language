@@ -11,6 +11,8 @@
 //--------------------------------------------------------     Functions     ---------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------
 
+//Functions need to return the value of a counter saying how many operations were performed.
+
 //--------------------------------------------------------     BMI Calculator (parameter by value)
 double bmiCalc(double bmiResult){
 	
@@ -24,6 +26,54 @@ double bmiCalc(double bmiResult){
 	bmiResult = weight / (height * height);
 	
 	return(bmiResult);
+};
+
+//--------------------------------------------------------     Biggest X Smallest (parameters by reference)
+void bigSml(int *larger, int *lg_Position, float *lesser, float *ls_Position, float *plus, double *average){ //Receveing the address of the values by using pointers
+	
+	float	numbers[11] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '\0'};
+	int		control = 0;
+	
+	for (control = 0; control < 10; control++) {
+		printf("Enter with the %dst number: ", control + 1);
+		scanf("%f", &numbers[control]);
+		*plus += numbers[control];
+		if(control == 0){
+			*larger = numbers[control];
+			*lesser = numbers[control];
+		};
+		if (numbers[control] > *larger){
+			*larger = numbers[control];
+			*lg_Position = control;
+		};
+		if(numbers[control] < *lesser){
+			*lesser = numbers[control];
+			*ls_Position = control;
+		};
+	};
+	
+	control = 0;
+	*average = *plus / 10;
+};
+
+float areaCalc(float form){
+	float res = 0;
+	
+	/*
+	circle			            =>		area = pi * (radius * radius)		pi = 3.141592
+	quatrefoil		          =>		area = 2 * (2 * pi * (radius * radius)) + (side * side)		area = dobro da área de dois semicírculos + área do quadrado interno
+	semicircle		          =>		area = (pi * (radius * radius)) / 2
+	curvilinear triangle		=>		searching...
+	triangle		            =>		area = (base * height) / 2;
+	square			            =>		area = side * side;
+	trapezoid		            =>		area = ((biggerBase + smallerBase) * height) / 2;
+	ellipse			            =>		area = (majorRadius * minorRadius) * pi;
+	rectangle		            =>		area = width + height;
+	pentagon	            	=>		area = 5 * ((side * height) / 2);
+	hexagon            			=>		searching...
+	*/
+	
+	return res;
 };
 
 
@@ -240,6 +290,139 @@ void op2(){		//--------------------------------------------------------    BMI (
 	} while (looping == 'y' || looping == 'Y');
 };
 
+void op3(){		//--------------------------------------------------------     Biggest X Smallest
+	
+	char	looping = '\0';
+	int		b_Position, s_Position = 0;
+	float	biggest, smallest, sum = 0;
+	double	media = 0;
+	
+	do{
+		printf("Enter with 10 digits.\n\n");
+		
+		bigSml(&b_Position, &s_Position, &biggest, &smallest, &sum, &media);
+	
+		printf("\n\nThe Smallest number is: %.2f and can be found in the %dst position of the array named as numbers.", smallest, s_Position);
+		printf("\nThe media of the values in the array numbers is: %.2f", media);	
+		printf("\nThe biggest number is %.2f and can be found in the %dst position of the array named as numbers.", biggest, b_Position);
+		printf("\nThe sum of the values in the array numbers is: %.2f", sum);
+		
+		do{
+			system("pause");
+			system("cls");
+			printf("\n\nDo you want to make another test?");
+			printf("\nEnter \"Y\" for YES or \"N\" for NO: ");
+			scanf("%c", &looping);
+			if (looping != 'y' && looping != 'Y' && looping != 'n' && looping != 'N') {
+				looping = '\0';
+				printf("\n\nINVALID OPTION\n\n");
+			};
+		} while (looping != 'y' && looping != 'Y' && looping != 'n' && looping != 'N');
+	} while (looping == 'y' || looping == 'Y');
+	
+	system("cls");
+};
+
+void op4(){		//--------------------------------------------------------    Area of the Triangle
+	
+	int		column, line, choseForm = 0;
+	float	align = 0;
+	float	areaValues[12][11];
+	
+	/*char	geometry[13][12] = 	{{"circle"}, 		//0
+								{"quatrefoil"},		//1
+								{"semicircle"}, 	//2
+								{"curvilinear"}, 	//3
+								{"triangle"}, 		//4
+								{"triangle"}, 		//5
+								{"square"}, 		//6
+								{"trapezoid"}, 		//7
+								{"ellipse"}, 		//8
+								{"rectangle"}, 		//9
+								{"pentagon"}, 		//10
+								{"hexagon"}};		//11
+
+	for (line = 0; line < 13; line++){
+		
+		if(line == 0 || line == 6){
+			for (column = 6; column < 12; column++){
+				geometry[line][column] = '\0';
+			};
+		} else if (line == 1 || line == 2){
+			for (column < 12; column++){
+				geometry[line][column] = '\0';
+			};
+		} else if (line == 3){
+			for (column = 11; column < 12; column++){
+				geometry[line][column] = '\0';
+			};
+		} else if (line == 4 || line == 5 || line == 10){
+			for (column = 8; column < 12; column++){
+				geometry[line][column] = '\0';
+			};
+		} else if (line == 7 || line == 9 || line == 11){
+			for (column = 9; column < 12; column++){
+				geometry[line][column] = '\0';
+			};
+		} else if (line == 8){
+			for (column = 7; column < 12; column++){
+				geometry[line][column] = '\0';
+			};
+		} else {
+			for (column = 0; column < 12; column++){
+				geometry[line][column] = '\0';
+			};
+		};
+		
+	};
+	*/
+	
+	char geometry[13][12] =		{{'c',  'i',  'r',  'c',  'l',  'e',  '\0', '\0', '\0', '\0', '\0', '\0'}, 	//0 => circle
+								{ 'q',  'u',  'a',  't',  'r',  'e',  'f',  'o',  'i',  'l',  '\0', '\0'},	//1 => quatrefoil
+								{ 's',  'e',  'm',  'i',  'c',  'i',  'r',  'c',  'l',  'e',  '\0', '\0'}, 	//2 => semicircle
+								{ 'c',  'u',  'r',  'v',  'i',  'l',  'i',  'n',  'e',  'a',  'r',  '\0'}, 	//3 => curciliear
+								{ 't',  'r',  'i',  'a',  'n',  'g',  'l',  'e',  '\0', '\0', '\0', '\0'}, 	//4 => triangle
+								{ 't',  'r',  'i',  'a',  'n',  'g',  'l',  'e',  '\0', '\0', '\0', '\0'}, 	//5 => triangle
+								{ 's',  'q',  'u',  'a',  'r',  'e',  '\0', '\0', '\0', '\0', '\0', '\0'}, 	//6 => square
+								{ 't',  'r',  'a',  'p',  'e',  'z',  'o',  'i',  'd',  '\0', '\0', '\0'}, 	//7 => trapezoid
+								{ 'e',  'l',  'l',  'i',  'p',  's',  'e',  '\0', '\0', '\0', '\0', '\0'}, 	//8 => ellipse
+								{ 'r',  'e',  'c',  't',  'a',  'n',  'g',  'l',  'e',  '\0', '\0', '\0'}, 	//9 => rectangle
+								{ 'p',  'e',  'n',  't',  'a',  'g',  'o',  'n',  '\0', '\0', '\0', '\0'}, 	//10 => pentagon
+								{ 'h',  'e',  'x',  'a',  'g',  'o',  'n',  '\0', '\0', '\0', '\0', '\0'},	//11 => hexagon
+								{ '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0'}};	//12 => \0
+	
+	for (line = 0; line < 12; line++){
+		for (column = 0; column < 11; column++){
+			areaValues[line][column] = 0;
+		};
+	};
+	
+	printf("What geometric form do you want to found the value?");
+	for(line = 0; line < 13; line++){
+		if (line < 4){
+			printf("\n%d ________________ ", line + 1);
+		} else if (line == 4) {
+			printf(" ");
+		} else {
+			printf("\n%d ________________ ", line);
+		};
+		for(column = 0; column < 12; column++){
+			if(geometry[line][column] != '\0'){
+				printf("%c", geometry[line][column]);
+			} else {
+				column = 12;
+			};
+		};
+	};
+	scanf("%d", &choseForm);
+	
+	//create loop and a condition to control amount of values into the matrix that contains results        &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+	areaValues[line][column] = areaCalc(align);
+
+	system("pause");
+	system("cls");
+};
+
 
 
 
@@ -291,12 +474,10 @@ int main() {
 				op2();
 				break;
 			case 3:
-				//op3();
-				printf("\n\nYou chose the option %d.\n\n", select);
+				op3();
 				break;
 			case 4:
-				//op4();
-				printf("\n\nYou chose the option %d.\n\n", select);
+				op4();
 				break;
 			case 5:
 				//op5();
